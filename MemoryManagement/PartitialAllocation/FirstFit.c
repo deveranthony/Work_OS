@@ -2,8 +2,10 @@
 
 void firstFit(int blockSize[], int m, int processSize[], int n){
     int i, j;
+    
+    int* allocation;
+    malloc(allocation);
 
-    int allocation[n];
     for( i = 0 ; i < n; i++ ){
         allocation[i] = -1;
     }
@@ -32,5 +34,14 @@ void firstFit(int blockSize[], int m, int processSize[], int n){
 }
 
 int main(){
+    int m;
+    int n;
+    int blockSize[] = {100,500,200,300,600};
+    int processSize[] = {212,427,112,426};
+    m = sizeof(blockSize)/ sizeof(blockSize[0]);
+    n = sizeof(processSize) / sizeof(processSize[0]);
 
+    firstFit(blockSize, m, processSize, n);
+
+    return 0;
 }
